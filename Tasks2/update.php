@@ -11,4 +11,4 @@ $sql = 'UPDATE tasks SET title=:title, content=:content WHERE id=:id';
 $statement = $pdo->prepare($sql);
 $statement->execute($data); // true || false
 
-header("Location: /"); exit;
+header("Location: http://localhost/MyNotes0/Tasks2/"); exit;

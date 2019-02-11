@@ -15,7 +15,7 @@ $statement->bindParam(':content', $_POST['content']);
  * $result = $statement->execute();
 */
 
-$statement->execute($_POST); //true || false
+$statement->execute($_POST); //true || false     //сразу передаем в execute массив
 
 //отправки письма
 
