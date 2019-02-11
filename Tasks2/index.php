@@ -6,7 +6,10 @@ $pdo = new PDO("mysql:host=localhost; dbname=test", "root", "");
 $sql = "SELECT * FROM tasks";
 $statement = $pdo->prepare($sql); //подготовить
 $result = $statement->execute(); //true || false
-$tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
+$tasks = $statement->fetchAll(PDO::FETCH_ASSOC);  //это константа говорит, что я получу данные в виде асоцциативного массива
+
+//var_dump($result); die;
+//var_dump($tasks); die;
 
 //Получаем записи
 
