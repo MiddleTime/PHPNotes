@@ -9,4 +9,4 @@ $statement->bindParam(":id", $id);
 $statement->execute();
 
 
-header('Location: /');
+header("Location: http://localhost/MyNotes0/Tasks2/"); exit;

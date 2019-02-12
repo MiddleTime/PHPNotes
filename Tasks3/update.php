@@ -12,4 +12,4 @@ $data = [
 
 $db->updateTask($data);
 
-header("Location: /"); exit;
+header("Location: http://localhost/MyNotes0/Tasks3/"); exit;

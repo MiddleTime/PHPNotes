@@ -8,4 +8,4 @@ $id = $_GET['id'];
 
 $db->deleteTask($id);
 
-header('Location: /');
+header("Location: http://localhost/MyNotes0/Tasks3/"); exit;

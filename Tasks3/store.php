@@ -6,4 +6,4 @@ $db = new QueryBuilder;
 
 $db->addTask($_POST);
 
-header("Location: /"); exit;
+header("Location: http://localhost/MyNotes0/Tasks3/"); exit;
