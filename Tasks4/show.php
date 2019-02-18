@@ -23,7 +23,7 @@ $task = $db->getOne("tasks", $id);
             <p>
                 <?= $task['content'];?>
             </p>
-            <a href="/">Go Back</a>
+            <a href="./">Go Back</a>
         </div>
     </div>
 </div>

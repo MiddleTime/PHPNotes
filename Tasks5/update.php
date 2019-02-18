@@ -12,4 +12,4 @@ $data = [
 
 $db->update("tasks", $data);
 
-header("Location: /"); exit;
+header("Location:./"); exit;
