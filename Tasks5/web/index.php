@@ -16,10 +16,10 @@ $db = new QueryBuilder;
 
 //КОМПОНЕНТ Auth
 $auth = new Auth($db);
-//$auth->register('user2@example.com', 'asd');
+//$auth->register('user2@example.com', md5('asd'));
 
-//$auth->login('user2@example.com', 'asd');
-$auth->login('root', '');
+$auth->login('user2@example.com', 'asd');
+//$auth->login('root', '');
 $user = $auth->currentUser();
 $auth->fullName();
 
