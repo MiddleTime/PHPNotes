@@ -6,7 +6,17 @@ class QueryBuilder
 
     function __construct()
     {
+        try
+        {
         $this->pdo = new PDO("mysql:host=localhost; dbname=test", "root", "");
+        }
+        catch (PDOException $e) {
+            $output = 'невозможно подключиться к базе данных!!!'. $e->getMessage();
+            include 'output.html.php';
+                    
+            exit();
+            
+        }
     }
 
     //Список задач
