@@ -24,17 +24,14 @@ class Auth
         $sql = "SELECT * FROM users WHERE email=:email AND password=:password LIMIT 1";
         $statement = $this->db->pdo->prepare($sql);
         $statement->bindParam(":email", $email);
-        //$pass = md5($password);
-        $statement->bindParam(":password", $password);
+        $statement->bindParam(":password", md5($password));
         $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-        
         //  2. Если да
         //      2.1. Записываем в сессию и возвращаем true
         if($user) {
             $_SESSION['user'] = $user;
-            
             return true;
         }
         //  3. Если нет

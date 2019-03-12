@@ -1,7 +1,7 @@
 <?php
-//if(!session_status()) {
+if(!session_status()) {
     session_start();
-//}
+}
 
 require '../database/QueryBuilder.php';
 require '../Components/Auth.php';
@@ -16,15 +16,13 @@ $db = new QueryBuilder;
 
 //КОМПОНЕНТ Auth
 $auth = new Auth($db);
-//$auth->register('user2@example.com', md5('asd'));
+//$auth->register('user2@example.com', 'asd');
 
-//$auth->login('user2@example.com', 'asd');
 $auth->login('user2@example.com', 'asd');
 $user = $auth->currentUser();
 $auth->fullName();
 
 //ТУТ ИДЕТ РОУТИНГ!
-//var_dump($_SERVER);die;
 $url = $_SERVER['REQUEST_URI']; //aboutme
 
 if($url == '/list') {

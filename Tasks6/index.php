@@ -1,23 +1,7 @@
 <?php
 
-//if(!session_status()) {
-    session_start();
-//}
-require 'database/QueryBuilder.php';
-
-
-$db = new QueryBuilder;
-
-
-
-require 'Components/Auth.php';
-$auth = new Auth($db);
-//var_dump ($auth->login('user2@example.com', 'asd'), );
-var_dump(session_status());
-var_dump($_SESSION);
-
 $tasks = $db->all("tasks");
- 
+
 
 
 
@@ -30,7 +14,7 @@ $tasks = $db->all("tasks");
 <body>
 <div class="container">
     <div class="row">
-        <a href="Components/Auth.php">Login</a>
+        <a href="/login">Login</a>
         <div class="col-md-12">
             <h1>All Tasks</h1>
             <a href="create.php" class="btn btn-success">Add Task</a>
